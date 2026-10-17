@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <!-- Soft Neon Filter -->
+    <filter id="zinistag-glow-fav" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- App Icon Border Rim -->
+    <linearGradient id="zinistag-icon-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- Ambient Neon Aura -->
+    <radialGradient id="fav-ambient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f5ff" stop-opacity="0.3" />
+      <stop offset="60%" stop-color="#ec4899" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Electric Cyan/Blue Gradients -->
+    <linearGradient id="fav-top-grad" x1="15%" y1="20%" x2="85%" y2="40%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#00f5ff" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <linearGradient id="fav-diag-grad" x1="85%" y1="20%" x2="15%" y2="80%">
+      <stop offset="0%" stop-color="#00f5ff" />
+      <stop offset="30%" stop-color="#06b6d4" />
+      <stop offset="70%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <linearGradient id="fav-bot-grad" x1="15%" y1="65%" x2="85%" y2="85%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="45%" stop-color="#0284c7" />
+      <stop offset="85%" stop-color="#00f5ff" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Magenta Accent Gradient -->
+    <linearGradient id="fav-pink-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a85" />
+      <stop offset="50%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+
+    <linearGradient id="fav-fold-shadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle App Icon Container -->
+  <rect width="98" height="98" x="1" y="1" rx="24" fill="#09090b" stroke="url(#zinistag-icon-border)" stroke-width="1.8" />
+
+  <!-- Ambient Glow -->
+  <circle cx="50" cy="50" r="38" fill="url(#fav-ambient)" />
+
+  <!-- Layer 1: Magenta Offset Ribbon Accent -->
+  <g opacity="0.9">
+    <path d="M72 23 L81 29 L44 80 L35 74 Z" fill="url(#fav-pink-accent)" />
+    <path d="M65 40 L73 40 L77 30 Z" fill="#ff2a85" opacity="0.8" />
+    <path d="M28 72 L36 63 L28 63 Z" fill="#ec4899" opacity="0.8" />
+    <path d="M39 79 L81 79 L77 83 L36 83 Z" fill="url(#fav-pink-accent)" opacity="0.85" />
+  </g>
+
+  <!-- Layer 2: Geometric Cyan / Blue Ribbons -->
+  <g filter="url(#zinistag-glow-fav)">
+    <!-- Top Horizontal Ribbon Bar -->
+    <path d="M24 25 H76 L65 40 H33 Z" fill="url(#fav-top-grad)" />
+    <path d="M24 25 H76 L73 28 H27 Z" fill="#ffffff" opacity="0.45" />
+
+    <!-- Dynamic Diagonal Ribbon -->
+    <path d="M76 25 L65 25 L26 77 L37 77 Z" fill="url(#fav-diag-grad)" />
+    <path d="M71 26 L31 76" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.45" />
+
+    <!-- Creases -->
+    <path d="M65 40 L76 25 L65 25 Z" fill="url(#fav-fold-shadow)" />
+    <path d="M37 63 L26 77 L37 77 Z" fill="url(#fav-fold-shadow)" />
+
+    <!-- Bottom Horizontal Ribbon Bar -->
+    <path d="M37 63 H69 L78 77 H26 Z" fill="url(#fav-bot-grad)" />
+    <path d="M39 65 H68 L66 67 H40 Z" fill="#ffffff" opacity="0.3" />
+  </g>
+
+  <!-- Nodes -->
+  <circle cx="76" cy="25" r="2" fill="#00f5ff" />
+  <circle cx="24" cy="25" r="1.6" fill="#38bdf8" />
+  <circle cx="78" cy="77" r="1.6" fill="#38bdf8" />
+  <circle cx="26" cy="77" r="2" fill="#ff2a85" />
+</svg>

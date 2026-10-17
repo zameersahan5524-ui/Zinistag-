@@ -1,0 +1,11 @@
+{
+  "name": "ZINISTAG",
+  "description": "ZINISTAG - Next Gen Short-Video & Creative Social Platform",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
